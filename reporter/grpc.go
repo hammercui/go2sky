@@ -1,7 +1,7 @@
-// Licensed to hammer org under one or more contributor
+// Licensed to hammercui org under one or more contributor
 // license agreements. See the NOTICE file distributed with
 // this work for additional information regarding copyright
-// ownership. hammer org licenses this file to you under
+// ownership. hammercui org licenses this file to you under
 // the Apache License, Version 2.0 (the "License"); you may
 // not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -23,11 +23,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/hammer/go2sky"
-	"github.com/hammer/go2sky/internal/tool"
-	"github.com/hammer/go2sky/reporter/grpc/common"
-	agentv3 "github.com/hammer/go2sky/reporter/grpc/language-agent"
-	managementv3 "github.com/hammer/go2sky/reporter/grpc/management"
+	"github.com/hammercui/go2sky"
+	"github.com/hammercui/go2sky/internal/tool"
+	"github.com/hammercui/go2sky/reporter/grpc/common"
+	agentv3 "github.com/hammercui/go2sky/reporter/grpc/language-agent"
+	managementv3 "github.com/hammercui/go2sky/reporter/grpc/management"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/connectivity"
 	"google.golang.org/grpc/credentials"
@@ -95,7 +95,7 @@ func WithMaxSendQueueSize(maxSendQueueSize int) GRPCReporterOption {
 	}
 }
 
-// WithInstanceProps setup service instance properties eg: org=hammer
+// WithInstanceProps setup service instance properties eg: org=hammercui
 func WithInstanceProps(props map[string]string) GRPCReporterOption {
 	return func(r *gRPCReporter) {
 		r.instanceProps = props

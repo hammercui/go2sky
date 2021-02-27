@@ -1,7 +1,7 @@
-// Licensed to hammer org under one or more contributor
+// Licensed to hammercui org under one or more contributor
 // license agreements. See the NOTICE file distributed with
 // this work for additional information regarding copyright
-// ownership. hammer org licenses this file to you under
+// ownership. hammercui org licenses this file to you under
 // the Apache License, Version 2.0 (the "License"); you may
 // not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -25,12 +25,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hammer/go2sky"
-	"github.com/hammer/go2sky/propagation"
-	"github.com/hammer/go2sky/reporter/grpc/common"
-	v3 "github.com/hammer/go2sky/reporter/grpc/language-agent"
-	managementv3 "github.com/hammer/go2sky/reporter/grpc/management"
-	"github.com/hammer/go2sky/reporter/grpc/management/mock_management"
+	"github.com/hammercui/go2sky"
+	"github.com/hammercui/go2sky/propagation"
+	"github.com/hammercui/go2sky/reporter/grpc/common"
+	v3 "github.com/hammercui/go2sky/reporter/grpc/language-agent"
+	managementv3 "github.com/hammercui/go2sky/reporter/grpc/management"
+	"github.com/hammercui/go2sky/reporter/grpc/management/mock_management"
 	"github.com/golang/mock/gomock"
 	"google.golang.org/grpc/credentials"
 )
@@ -129,13 +129,13 @@ func TestGRPCReporter_Close(t *testing.T) {
 func TestGRPCReporterOption(t *testing.T) {
 	// props
 	instanceProps := make(map[string]string)
-	instanceProps["org"] = "hammer"
+	instanceProps["org"] = "hammercui"
 
 	// log
 	logger := log.New(os.Stderr, "WithLogger", log.LstdFlags)
 
 	// tls
-	creds, err := credentials.NewClientTLSFromFile("../test/test-data/certs/cert.crt", "hammer.org")
+	creds, err := credentials.NewClientTLSFromFile("../test/test-data/certs/cert.crt", "hammercui.org")
 	if err != nil {
 		t.Error(err)
 	}
@@ -172,7 +172,7 @@ func TestGRPCReporterOption(t *testing.T) {
 				if value, ok = reporter.instanceProps["org"]; !ok {
 					t.Error("error are not set instanceProps")
 				}
-				if value != "hammer" {
+				if value != "hammercui" {
 					t.Error("error are not set instanceProps")
 				}
 			},
@@ -217,7 +217,7 @@ func TestGRPCReporterOption(t *testing.T) {
 
 func TestGRPCReporter_reportInstanceProperties(t *testing.T) {
 	customProps := make(map[string]string)
-	customProps["org"] = "hammer"
+	customProps["org"] = "hammercui"
 	osProps := buildOSInfo()
 	for k, v := range customProps {
 		osProps = append(osProps, &common.KeyStringValuePair{

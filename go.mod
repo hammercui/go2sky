@@ -1,4 +1,4 @@
-module github.com/hammer/go2sky
+module github.com/hammercui/go2sky
 
 go 1.12
 
