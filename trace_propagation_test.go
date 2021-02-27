@@ -1,7 +1,7 @@
-// Licensed to SkyAPM org under one or more contributor
+// Licensed to hammer org under one or more contributor
 // license agreements. See the NOTICE file distributed with
 // this work for additional information regarding copyright
-// ownership. SkyAPM org licenses this file to you under
+// ownership. hammer org licenses this file to you under
 // the Apache License, Version 2.0 (the "License"); you may
 // not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -22,7 +22,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/SkyAPM/go2sky/propagation"
+	"github.com/hammer/go2sky/propagation"
 )
 
 const (

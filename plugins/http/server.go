@@ -1,7 +1,7 @@
-// Licensed to SkyAPM org under one or more contributor
+// Licensed to hammer org under one or more contributor
 // license agreements. See the NOTICE file distributed with
 // this work for additional information regarding copyright
-// ownership. SkyAPM org licenses this file to you under
+// ownership. hammer org licenses this file to you under
 // the Apache License, Version 2.0 (the "License"); you may
 // not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -23,10 +23,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/SkyAPM/go2sky"
-	"github.com/SkyAPM/go2sky/internal/tool"
-	"github.com/SkyAPM/go2sky/propagation"
-	v3 "github.com/SkyAPM/go2sky/reporter/grpc/language-agent"
+	"github.com/hammer/go2sky"
+	"github.com/hammer/go2sky/internal/tool"
+	"github.com/hammer/go2sky/propagation"
+	v3 "github.com/hammer/go2sky/reporter/grpc/language-agent"
 )
 
 const (

@@ -6,7 +6,7 @@ package language_agent
 import (
 	context "context"
 	fmt "fmt"
-	common "github.com/SkyAPM/go2sky/reporter/grpc/common"
+	common "github.com/hammer/go2sky/reporter/grpc/common"
 	proto "github.com/golang/protobuf/proto"
 	grpc "google.golang.org/grpc"
 	math "math"
