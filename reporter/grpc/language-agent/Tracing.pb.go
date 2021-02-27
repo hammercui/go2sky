@@ -517,7 +517,7 @@ func (m *ID) GetId() []string {
 }
 
 func init() {
-	proto.RegisterEnum("SpanType", SpanType_name, SpanType_value)
+	//proto.RegisterEnum("SpanType", SpanType_name, SpanType_value)
 	proto.RegisterEnum("RefType", RefType_name, RefType_value)
 	proto.RegisterEnum("SpanLayer", SpanLayer_name, SpanLayer_value)
 	proto.RegisterType((*SegmentObject)(nil), "SegmentObject")
