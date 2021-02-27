@@ -69,7 +69,7 @@ type ReportedSpan interface {
 	EndTime() int64
 	OperationName() string
 	Peer() string
-	SpanType() v3.SpanType
+	SpanType() v3.SkySpanType
 	SpanLayer() v3.SpanLayer
 	IsError() bool
 	Tags() []*common.KeyStringValuePair
@@ -122,8 +122,8 @@ func (s *segmentSpanImpl) Peer() string {
 	return s.defaultSpan.Peer
 }
 
-func (s *segmentSpanImpl) SpanType() v3.SpanType {
-	return v3.SpanType(s.defaultSpan.SpanType)
+func (s *segmentSpanImpl) SpanType() v3.SkySpanType {
+	return v3.SkySpanType(s.defaultSpan.SpanType)
 }
 
 func (s *segmentSpanImpl) SpanLayer() v3.SpanLayer {

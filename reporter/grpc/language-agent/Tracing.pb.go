@@ -23,12 +23,12 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-type SpanType int32
+type SkySpanType int32
 
 const (
-	SpanType_Entry SpanType = 0
-	SpanType_Exit  SpanType = 1
-	SpanType_Local SpanType = 2
+	SpanType_Entry SkySpanType = 0
+	SpanType_Exit  SkySpanType = 1
+	SpanType_Local SkySpanType = 2
 )
 
 var SpanType_name = map[int32]string{
@@ -43,11 +43,11 @@ var SpanType_value = map[string]int32{
 	"Local": 2,
 }
 
-func (x SpanType) String() string {
+func (x SkySpanType) String() string {
 	return proto.EnumName(SpanType_name, int32(x))
 }
 
-func (SpanType) EnumDescriptor() ([]byte, []int) {
+func (SkySpanType) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_e1989527c3daf331, []int{0}
 }
 
@@ -295,7 +295,7 @@ type SpanObject struct {
 	Refs                 []*SegmentReference          `protobuf:"bytes,5,rep,name=refs,proto3" json:"refs,omitempty"`
 	OperationName        string                       `protobuf:"bytes,6,opt,name=operationName,proto3" json:"operationName,omitempty"`
 	Peer                 string                       `protobuf:"bytes,7,opt,name=peer,proto3" json:"peer,omitempty"`
-	SpanType             SpanType                     `protobuf:"varint,8,opt,name=spanType,proto3,enum=SpanType" json:"spanType,omitempty"`
+	SpanType             SkySpanType                     `protobuf:"varint,8,opt,name=spanType,proto3,enum=SpanType" json:"spanType,omitempty"`
 	SpanLayer            SpanLayer                    `protobuf:"varint,9,opt,name=spanLayer,proto3,enum=SpanLayer" json:"spanLayer,omitempty"`
 	ComponentId          int32                        `protobuf:"varint,10,opt,name=componentId,proto3" json:"componentId,omitempty"`
 	IsError              bool                         `protobuf:"varint,11,opt,name=isError,proto3" json:"isError,omitempty"`
@@ -381,7 +381,7 @@ func (m *SpanObject) GetPeer() string {
 	return ""
 }
 
-func (m *SpanObject) GetSpanType() SpanType {
+func (m *SpanObject) GetSpanType() SkySpanType {
 	if m != nil {
 		return m.SpanType
 	}
