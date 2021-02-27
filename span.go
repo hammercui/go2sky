@@ -28,15 +28,15 @@ import (
 )
 
 // SpanType is used to identify entry, exit and local
-type SpanType int32
+type SkySpanType int32
 
 const (
 	// SpanTypeEntry is a entry span, eg http server
-	SpanTypeEntry SpanType = 0
+	SpanTypeEntry SkySpanType = 0
 	// SpanTypeExit is a exit span, eg http client
-	SpanTypeExit SpanType = 1
+	SpanTypeExit SkySpanType = 1
 	// SpanTypeLocal is a local span, eg local method invoke
-	SpanTypeLocal SpanType = 2
+	SpanTypeLocal SkySpanType = 2
 )
 
 // Span interface as common span specification
@@ -74,7 +74,7 @@ type defaultSpan struct {
 	Tags          []*common.KeyStringValuePair
 	Logs          []*v3.Log
 	IsError       bool
-	SpanType      SpanType
+	SpanType      SkySpanType
 }
 
 // For Span

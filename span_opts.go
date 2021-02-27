@@ -30,7 +30,7 @@ func WithContext(sc *propagation.SpanContext) SpanOption {
 }
 
 // WithSpanType setup span type of a span
-func WithSpanType(spanType SpanType) SpanOption {
+func WithSpanType(spanType SkySpanType) SpanOption {
 	return func(s *defaultSpan) {
 		s.SpanType = spanType
 	}
